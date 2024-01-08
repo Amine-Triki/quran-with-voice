@@ -1,13 +1,13 @@
 import './Header.css'
-
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ pageColor }) => {
   return (
     <> 
-    <nav  className="navbar navbar-expand-lg sticky-top text-info  "  style={{ backgroundColor: '#ffc0cb' }}> 
+    <nav  className={`navbar navbar-expand-lg sticky-top   ${pageColor}`}> 
           <div className="container">
-            <Link  to="/" className="navbar-brand" ><h1>Amine Triki</h1></Link>
+            <Link  to="/" className="navbar-brand" ><h1 className={`${pageColor}`}>Amine Triki</h1></Link>
             <button className="navbar-toggler" 
             type="button" 
             data-bs-toggle="collapse" 
@@ -40,5 +40,9 @@ const Header = () => {
     </>
   )
 }
+
+Header.propTypes = {
+  pageColor: PropTypes.string.isRequired, 
+};
 
 export default Header
