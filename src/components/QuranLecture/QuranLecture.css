@@ -1,0 +1,8 @@
+.view{
+    background-image: url('../../assets/quran.webp');
+    height: 650px;
+    width: auto;
+    object-fit:fill;
+    background-position: center ;    
+
+}

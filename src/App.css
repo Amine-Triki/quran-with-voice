@@ -1,0 +1,40 @@
+main {
+  min-height:calc(100vh - 138px);
+}
+h2 {
+  color:#AA7A82;
+}
+
+.primary{
+  background-color: #0d6efd;
+  color: #000000
+  
+}
+.secondary{
+  background-color: #6c757d;
+  color: #ffffff;
+}
+.success{
+  background-color: #198754;
+  color: #000000;
+}
+.warning{
+  background-color: #ffc107;
+  color: #000000;
+}
+.danger{
+  background-color: #DC3545;
+  color: #000000;
+}
+.info{
+  background-color:#0DCAF0;
+  color: #000000;
+}
+.light{
+  background-color:#f8f9fa;
+  color: #000000;
+}
+.dark{
+  background-color: #212529;
+  color: #ffffff;
+}

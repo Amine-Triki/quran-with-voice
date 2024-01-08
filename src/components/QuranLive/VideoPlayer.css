@@ -1,0 +1,14 @@
+
+@media (max-width: 567px) {
+  #react-player-id {
+    width: 350px !important;
+    height: auto !important;
+  }
+}
+
+@media  (min-width: 568px) and (max-width: 768px) {
+  #react-player-id {
+    width: 540px !important;
+    height: auto !important; 
+  }
+}

@@ -1,0 +1,5 @@
+export {default as Header} from './Header/Header'
+export {default as Footer} from './Footer/Footer'
+export {default as Colors} from './Colros/Colors'
+export {default as QuranLecture} from './QuranLecture/QuranLecture'
+export {default as QuranLive} from './QuranLive/QuranLive'
