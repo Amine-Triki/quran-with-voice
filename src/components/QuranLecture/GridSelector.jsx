@@ -125,7 +125,7 @@ console.log();
   };
   return (
     <Form className="container text-center">
-      <Row className="justify-content-center align-items-center mb-3 flex-row-reverse">
+      <Row className="justify-content-center align-items-center mb-3 flex-row-reverse container">
         {/* اختيار القارئ */}
         <Col sm={12} md={6} lg={4}>
           <Form.Group controlId="chooseReciter">
@@ -190,7 +190,7 @@ console.log();
       </Row>
 
       <ReactAudioPlayer
-        className="w-100"
+        className="w-100 container"
         ref={audioPlayerRef}
         src={surahMp3}
         controls

@@ -11,8 +11,8 @@ function Home() {
         <link rel="icon"  type="image/png" href="../../assets/logo.webp"></link>
       </Helmet>
 
-      <QuranLecture/>
-      <QuranLive/>
+      <QuranLecture className='container' />
+      <QuranLive className='container' />
       
     </main>
     
