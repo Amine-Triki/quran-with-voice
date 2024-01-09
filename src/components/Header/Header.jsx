@@ -19,17 +19,17 @@ const Header = ({ pageColor }) => {
             </button>
             <div className="collapse navbar-collapse" id="main">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link  to="/" className="nav-link  p-2 p-lg-3">Home</Link>
+                <li className="nav-item display-6">
+                  <Link  to="/" className="nav-link   p-3 p-lg-4">Home</Link>
                 </li>
-                <li className="nav-item">
-                  <Link  to="/About" className="nav-link  p-2 p-lg-3">About</Link>
+                <li className="nav-item display-6">
+                  <Link  to="/About" className="nav-link  p-3 p-lg-4">About</Link>
                 </li>
-                <li className="nav-item">
-                  <Link to="/projects" className="nav-link  p-2 p-lg-3">Projects</Link>
+                <li className="nav-item display-6">
+                  <Link to="/projects" className="nav-link  p-3 p-lg-4">Projects</Link>
                 </li>
-                <li className="nav-item">
-                  <Link to="/contact" className="nav-link  p-2 p-lg-3">Contact Me</Link>
+                <li className="nav-item display-6">
+                  <Link to="/contact" className="nav-link  p-3 p-lg-4">Contact Me</Link>
                 </li>
               </ul>
             

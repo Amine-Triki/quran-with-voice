@@ -2,3 +2,7 @@
     color: inherit;
   }
   
+  .navbar-toggler    {
+    filter: invert(1);
+  }
+  
