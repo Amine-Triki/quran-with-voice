@@ -1,3 +1,4 @@
+import Img11 from "/src/assets/11.webp"
 import Img10 from "/src/assets/10.webp"
 import Img9 from "/src/assets/9.webp"
 import Img8 from "/src/assets/8.webp"
@@ -8,6 +9,13 @@ import Img4 from "/src/assets/4.webp"
 import Img3 from "/src/assets/3.webp"
 
 const projects = [
+    {
+      category: 'React',
+      title: 'quran Website',
+      description: 'vite React + BOOTSTRAP + PWA',
+      link: 'https://quran.aminetriki.com.tn/',
+      imageSrc: Img11,
+    },
     {
       category: 'React',
       title: 'Weather Website',
