@@ -26,7 +26,7 @@ function About() {
               with best practices
             </h3>
             <h3 className="mt-3">
-              I use Sass, Tailwind Css, Bootstrap, JavaScript, Vue js & React ;
+              I use Sass, Tailwind Css, Bootstrap, JavaScript & React ;
               I am a WordPress editor.
             </h3>
             <a
