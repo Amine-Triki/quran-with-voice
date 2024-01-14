@@ -31,7 +31,7 @@ function About() {
             </h3>
             <a
               className="btn  rounded-pill main-btn  mt-3 fs-4"
-              href="https://mega.nz/file/TR10kDbA#Vd4TJMRzCeRvwAkiWMmzPxDa9-sTOokSzm-YbhaeX6U"
+              href="https://mega.nz/file/KVdmTQLY#NJKIZHSzCZRdakg2wS0iwpEvSRSIJmgZHbH5GS3f_Ow"
               target="_blank"
               rel="noreferrer"
               style={{ backgroundColor: "#ffc0cb" }}
@@ -47,7 +47,7 @@ function About() {
                 <RiGithubFill className="display-2 " />
               </a>
               <a
-                href="https://tn.linkedin.com/in/amine-triki-06b95220b/"
+                href="https://www.linkedin.com/in/amine-triki-tn/"
                 target="_blank"
                 rel="noreferrer"
               >
