@@ -16,7 +16,7 @@ const QuranLive = () => {
 
   return (
     <div className='d-flex align-items-center flex-column wrap gap-2'>
-      <h3 className='my-3'>البث المباشر</h3>
+      <h3 className='my-3' >البث المباشر</h3>
       <div>
         <Button onClick={() => handleButtonClick('https://win.holol.com/live/quran/playlist.m3u8')} variant="primary">
           قناة القرآن الكريم

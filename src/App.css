@@ -1,9 +1,7 @@
 main {
   min-height:calc(100vh - 138px);
 }
-h2 {
-  color:#AA7A82;
-}
+
 
 .primary{
   background-color: #0d6efd;

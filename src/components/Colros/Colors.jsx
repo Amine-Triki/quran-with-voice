@@ -9,7 +9,6 @@ const Colors = ({ onColorChange }) => {
 
   return ( 
     <div className='btn-color d-flex flex-column align-items-start fixed-top   justify-content-center '>
-      <Button onClick={() => handleButtonClick('primary')} variant="primary my-3  p-3"></Button>
       <Button onClick={() => handleButtonClick('secondary')} variant="secondary my-3 p-3 "></Button>
       <Button onClick={() => handleButtonClick('success')} variant="success my-3 p-3"></Button>
       <Button onClick={() => handleButtonClick('warning')} variant="warning my-3 p-3"></Button>
