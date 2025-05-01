@@ -8,7 +8,7 @@ const Footer = ({ pageColor }) => {
     
     <>
       <footer className={`footer py-3 ${pageColor}`} >
-        <p id="Rights" className="container text-center mb-0">{`${year} © Amine Triki || All Rights Reserved`} </p>
+        <p id="Rights" className="container text-center mb-0">{`${year} -- 2024 © Amine Triki || All Rights Reserved`} </p>
     </footer>
     </>
   )
