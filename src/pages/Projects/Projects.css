@@ -1,11 +1,77 @@
-.switcher {
-    list-style:none;
+.projects-page {
+    background: linear-gradient(180deg, rgba(255, 193, 7, 0.08), transparent 28rem);
 }
-.switcher li.active {
-    
-    color:blueviolet;
+
+.projects-heading h1 {
+    font-weight: 700;
 }
-.switcher li:hover{
-    color:blue;
-    cursor: pointer;
+
+.section-heading {
+    border-left: 4px solid #ffc107;
+    padding-left: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-card {
+    border: 0;
+    box-shadow: 0 0.25rem 1rem rgba(33, 37, 41, 0.1);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(33, 37, 41, 0.16);
+}
+
+.project-card .card-img-top {
+    height: 12rem;
+    object-fit: cover;
+}
+
+.featured-card .card-img-top {
+    height: 15rem;
+}
+
+.technology-list .badge,
+.variant-item .badge {
+    font-weight: 500;
+}
+
+.variant-github {
+    line-height: 1;
+}
+
+.gallery-main-image {
+    display: block;
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+.gallery-thumbnails {
+    padding-bottom: 0.25rem;
+}
+
+.gallery-thumbnail {
+    flex: 0 0 5rem;
+    padding: 0;
+    border: 2px solid transparent;
+    background: transparent;
+}
+
+.gallery-thumbnail.active {
+    border-color: #0d6efd;
+}
+
+.gallery-thumbnail img {
+    display: block;
+    width: 5rem;
+    height: 4rem;
+    object-fit: cover;
+}
+
+.projects-state {
+    min-height: 50vh;
+    display: grid;
+    place-items: center;
 }
