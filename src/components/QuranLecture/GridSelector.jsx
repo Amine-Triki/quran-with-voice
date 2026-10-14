@@ -2,6 +2,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import ReactAudioPlayer from "react-audio-player";
+import Select from "react-select";
 import { useState, useEffect, useRef } from 'react';
 import BorderExample from "./BorderExample";
 const apiUrl = 'https://mp3quran.net/api/v3';
@@ -116,12 +117,27 @@ console.log();
   
   //
 
-  const handleReciterChange = (e) => {
-    const reciterId = e.target.value;
+  const reciterOptions = reciter.map((item) => ({
+    value: item.id.toString(),
+    label: item.name,
+  }));
+
+  const moshafOptions = moshaf.map((item) => ({
+    value: item.id.toString(),
+    label: item.name,
+  }));
+
+  const surahOptions = suwar.map((item) => ({
+    value: item.id.toString(),
+    label: item.name,
+  }));
+
+  const handleReciterChange = (option) => {
+    const reciterId = option?.value || '';
     setSelectedReciter(reciterId);
-    // إعادة تعيين القيم عند اختيار القارئ
     setSelectedMoshaf('');
     setSelectedSurah('');
+    setSelectedMoshafIndex(null);
   };
   return (
     <Form className="container text-center">
@@ -129,20 +145,20 @@ console.log();
         {/* اختيار القارئ */}
         <Col sm={12} md={6} lg={4}>
           <Form.Group controlId="chooseReciter">
-            <Form.Label>اختر القارء</Form.Label>
-            <Form.Select
-              value={selectedReciter}
+            <Form.Label>اختر القارئ أولًا</Form.Label>
+            <Select
+              options={reciterOptions}
+              value={reciterOptions.find(
+                (option) => option.value === selectedReciter
+              ) || null}
               onChange={handleReciterChange}
-            >
-              <option value="" disabled>اختر القارء أولا</option>
-              {reciter.map(reciter => (
-                <option key={reciter.id} value={reciter.id}>
-                  {reciter.name}
-                  
-                </option>
-              ))}
-              
-            </Form.Select>
+              isSearchable
+              isClearable
+              isLoading={isLoading}
+              placeholder="ابحث عن القارئ..."
+              noOptionsMessage={() => "لا توجد نتائج"}
+              isRtl
+            />
             {isLoading && <BorderExample />}
           </Form.Group>
         </Col>
@@ -150,41 +166,47 @@ console.log();
         {/* اختيار الرواية */}
         <Col sm={12} md={6} lg={4}>
         <Form.Group controlId="chooseMoshaf">
-          <Form.Label>اختر الرواية</Form.Label>
-          <Form.Select
-            value={selectedMoshaf}
-            onChange={(e) => {setSelectedMoshaf(e.target.value)
-              setSelectedMoshafIndex(e.target.selectedIndex);
+          <Form.Label>اختر الرواية ثانيًا</Form.Label>
+          <Select
+            options={moshafOptions}
+            value={moshafOptions.find(
+              (option) => option.value === selectedMoshaf
+            ) || null}
+            onChange={(option) => {
+              const moshafId = option?.value || '';
+              setSelectedMoshaf(moshafId);
+              setSelectedMoshafIndex(
+                moshaf.findIndex((item) => item.id.toString() === moshafId) + 1
+              );
+              setSelectedSurah('');
             }}
-          >
-           <option value="" disabled>اختر الرواية ثانيا</option> 
-            {moshaf.map(moshaf => (
-              <option key={moshaf.id} value={moshaf.id}>
-                {moshaf.name  }
-                
-                
-              </option>
-            ))}
-          </Form.Select>
+            isSearchable
+            isClearable
+            isDisabled={!selectedReciter || moshafOptions.length === 0}
+            placeholder="ابحث عن الرواية..."
+            noOptionsMessage={() => "لا توجد نتائج"}
+            isRtl
+          />
         </Form.Group>
       </Col>
         
         {/* اختيار السورة */}
         <Col sm={12} md={6} lg={4}>
           <Form.Group controlId="chooseSurah">
-            <Form.Label>اختر السورة</Form.Label>
-            <Form.Select
-              value={selectedSurah}
-              onChange={(e) => setSelectedSurah(e.target.value)}
-            >
-              <option value="" disabled>ثم اختر السورة </option>
-              {suwar.map(surah => (
-                <option key={surah.id} value={surah.id}>
-                  {surah.name}
-                  
-                </option>
-              ))}
-            </Form.Select>
+            <Form.Label>اختر السورة أخيرًا</Form.Label>
+            <Select
+              options={surahOptions}
+              value={surahOptions.find(
+                (option) => option.value === selectedSurah
+              ) || null}
+              onChange={(option) => setSelectedSurah(option?.value || '')}
+              isSearchable
+              isClearable
+              isDisabled={!selectedMoshaf || surahOptions.length === 0}
+              placeholder="ابحث عن السورة..."
+              noOptionsMessage={() => "لا توجد نتائج"}
+              isRtl
+            />
           </Form.Group>
         </Col>
       </Row>
