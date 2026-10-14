@@ -187,7 +187,7 @@ const Projects = () => {
               )}
 
               <section aria-labelledby="all-projects-heading">
-                <h2 id="all-projects-heading" className="section-heading">All Projects</h2>
+                <h2 id="all-projects-heading" className="section-heading">other Projects</h2>
                 <Nav variant="pills" className="project-filters mb-4 gap-2" activeKey={activeCategory}>
                   {categories.map((category) => (
                     <Nav.Item key={category}>
